@@ -198,7 +198,7 @@ button {
 .bg-img {
   height: 600px;
   width: 100%;
-  background: url("/images/hero.jpg") no-repeat center center fixed; 
+  background: url("images/hero.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -206,7 +206,7 @@ button {
 }
 
 .bg-reverse {
-  background: url("/images/tlo.jpg") no-repeat center center fixed;
+  background: url("images/tlo.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
