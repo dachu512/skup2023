@@ -1,0 +1,390 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  --max-width: 1110px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+/* Utility classes */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+button {
+  text-transform: uppercase;
+  border: 2px solid #252324;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-animation {
+  color: black;
+    background-image: linear-gradient(90deg, white 50%, black 50%);
+}
+.btn {
+  border-radius: 4px;
+  text-transform: uppercase;
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid black;
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  background-size: 300%;
+  transition: all 0.6s;
+}
+.btn:hover {
+  color: #fff;
+  background-position: 100%;
+  transform: translateX(0.5rem);
+}
+
+.btn:active {
+  transform: translate(0.5rem, 0.5rem);
+  box-shadow: 0px 10px 20px -15px rgba(0, 0, 0, 0.75);
+}
+/* 
+.nav-list {
+  display: flex;
+}
+
+.nav-item {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #232323;
+  margin-right: 32px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 138px;
+} */
+
+
+/* navigation */
+
+.primary-header {
+  border-bottom: 2px solid #f6f6f6;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-list a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #232323;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  color: #838383;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.logo img{
+  height: 50px;
+}
+
+/* hero section */
+
+.bg-img {
+  height: 600px;
+  width: 100%;
+  background: url("/images/hero.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg-reverse {
+  background: url("/images/tlo.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+}
+
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+.hero {
+  padding-top: 75px;
+}
+
+.hero-logo {
+  height: 220px;
+}
+
+.hero-title {
+  font-size: 75px;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #252324;
+}
+
+.call-btn {
+  margin-top: 80px;
+  width: 250px;
+  height: 56px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* section */
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12rem;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.bg-primary {
+  background-color: #BDA78E;
+}
+
+.section-header {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.text-side > p {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.two-columns > img {
+  border-radius: 2%;
+  /* box-shadow: 4.9px 9.8px 9.8px hsl(0deg 0% 0% / 0.35); */
+  box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+}
+
+.img-side {
+  max-height: 500px;
+  height: auto;
+}
+
+.locations {
+  min-width: 100px;
+}
+
+.locations > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.three-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 4rem 3rem;
+}
+
+.box {
+  border-radius: 2%;
+  height: 100%;
+  background: #BDA78E;
+  padding: 2.5rem;
+}
+
+.box > h3 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+
+@media (max-width: 50em) {
+  .hero {
+    padding-left: 1rem;
+  }
+
+  .primary-navigation {
+    display: none;
+
+    position: absolute;
+    padding: 2rem;
+    inset: 7rem 1rem auto;
+    background: #f6f6f6;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 .75em rgb(0, 0, 0, 0.05), 0 0 0 100vmax rgb(0 0 0 / 0.5);
+  }
+
+  .nav-list {
+    display: grid;
+    gap: 2rem;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .primary-navigation[data-visible] {
+    display: block;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0.5em;
+  }
+  
+  .mobile-nav-toggle  .icon-close{
+    display: none;
+  }
+
+  .two-columns {
+    display: block;
+    padding: 2rem 1rem;
+  }
+
+  .three-columns {
+    display: block;
+    padding: 2rem 1rem;
+  }
+  
+  .box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .block-mobile {
+    display: none;
+  }
+
+  .img-mobile {
+    display: block;
+    margin: auto;
+  }
+
+  .bg-reverse,
+  .overlay {
+    height: 600px;
+  }
+
+
+}
