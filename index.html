@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skup książek - Unikat Antykwariat i Księgarnia</title>
   <link rel="stylesheet" href="css/style.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
+  <meta name="robots" content="noindex">
 </head>
 <body>
   <header class="primary-header">
@@ -27,7 +27,7 @@
             <li class="nav-item"><a href="#howitworks">Jak to działa</a></li>
             <li class="nav-item"><a href="#aboutus">O nas</a></li>
             <li class="nav-item"><a href="#rules">Zasady skupu</a></li>
-            <li class="nav-item"><a href="#">Kontakt</a></li>
+            <li class="nav-item"><a href="#contact">Kontakt</a></li>
           </ul>
         </nav>
       </div>
@@ -37,12 +37,11 @@
 
   <section class="bg-img">
     <div class="hero container">
-      <img src="images/unikat-logo.png" alt="" class="hero-logo">
-      <h2 class="hero-title">skup książek</h2>
-      <button class="call-btn shrink-border">ZADŹWOŃ!</button>
+      <img src="images/unikat-logo.png" alt="" class="hero-logo hidden show-from-left">
+      <h2 class="hero-title hidden show-from-left">skup książek</h2>
+      <button class="call-btn shrink-border hidden show-from-bottom" onclick="location.href='#contact';" type="button">ZADZWOŃ!</button>
     </div>
   </section>
-
 <section class="bg-primary">
   <div class="two-columns container">
     <div class="text-side">
@@ -84,12 +83,12 @@
         <div>
           <span>SOLEC 81B/P31</span>
           <span>CH ARKADA</span>
-          <span class="phone-number">☎ +48 789 490 216</span>
+          <span class="phone-number hidden show-from-bottom">☎ +48 789 490 216</span>
         </div>
         <div>
           <span>KOŁACIŃSKA 24</span>
           <span>BIAŁOŁĘKA</span>
-          <span class="phone-number">☎ +48 798 254 823</span>
+          <span class="phone-number hidden show-from-bottom">☎ +48 798 254 823</span>
       </div>
     </div>
   </div>
@@ -110,15 +109,15 @@
 
 <section id="rules">
   <div class="three-columns">
-    <div class="box">
+    <div class="box hidden show-from-left">
       <h3>JAK WYGLĄDA TERENOWY SKUP KSIĄŻEK?</h3>
       <p>Skup terenowy prowadzimy w obrębie Warszawy po wcześniejszym umówieniu. Aby usprawnić kontakt prosimy o przesłanie zdjęcia poglądowego grzbietów książek oraz informacje nt. przybliżonej lokalizacji i numeru telefonu kontaktowego.</p>
     </div>
-    <div class="box">
+    <div class="box hidden show-from-left">
       <h3>Jak wyceniamy książki?</h3>
       <p>Każda książka wyceniana jest indywidualnie, na kwotę jaką proponujemy mają wpływ takie czynniki jak m.in. ilość nakładu, tematyka, zainteresowania klientów rynku wtórnego oraz nasze stany magazynowe. Zastrzegamy sobie prawo odrzucenia książek, które nie spełniają naszych wymagań.</p>
     </div>
-    <div class="box">
+    <div class="box hidden show-from-left">
       <h3>Jakich książek nie odkupimy?</h3>
       <p>NIE PROWADZIMY SKUPU ENCYKLOPEDII, SŁOWNIKÓW (Z WYŁĄCZENIEM SPECJALISTYCZNYCH), PODRĘCZNIKÓW (OPRÓCZ AKADEMICKICH) ORAZ WYDAŃ LEKTUROWYCH. KSIĄŻKI MUSZĄ BYĆ W STANIE POZWALAJĄCYM NA KORZYSTANIE - NIE MOGĄ BYĆ ZALANE, WYBRUDZONE, WYBRAKOWANE.</p>
     </div>
@@ -159,20 +158,20 @@
   </div>
 </section>
 
-<section class="bg-secondary">
+<section id="contact" class="bg-secondary">
   <div class="three-columns container">
     <div class="footer-box">
       <h3 class="footer-title">gdzie nas jeszcze znajdziesz?</h3>
       <div class="footer-section">
-        <span>unikatantykwariat.pl</span>
-        <span>@unikat.ksiazki</span>
-        <span>@unikatantyk</span>
+        <div class="icon baseline"><img src="images/www.svg" alt=""><a href="https://unikatantykwariat.pl">unikatantykwariat.pl</a></div>
+        <div class="icon baseline"><img src="images/fb.svg" alt=""><a href="https://pl-pl.facebook.com/unikatantyk/">@unikatantyk</a></div>
+        <div class="icon baseline"><img src="images/instagram.svg" alt=""><a href="https://www.instagram.com/unikat.ksiazki/">@unikat.ksiazki</a></div>
       </div>
     </div>
     <div class="footer-box">
       <h3 class="footer-title">masz pytanie? skontaktuj się z nami!</h3>
       <div class="footer-section">
-        <span>EMAIL</span>
+        <span>E-MAIL</span>
         <span>sklep@unikatantykwariat.pl</span>
         <span>bok@unikatantykwariat.pl</span>
         <span>TELEFON</span>
@@ -180,12 +179,15 @@
       </div>
     </div>
     <div class="footer-box">
-      <img src="images/unikat-logo.png" alt="">
+      <img src="images/image.webp" alt="">
+      <span>Masz pytania?</span>
+      <button class="call-btn-secondary hidden show-from-bottom">ZADZWOŃ!</button>
+
     </div>
   </div>
 </section>
 
 
-  <script type="module" src="main.js"></script>
+<script defer type="module" src="main.js"></script>
 </body>
 </html>
