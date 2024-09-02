@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Przekierowanie /kontakt na /#contact
+RewriteCond %{HTTPS} on
+RewriteCond %{REQUEST_URI} ^/kontakt$
+RewriteRule ^(.*)$ https://www.skupksiazek-24.pl/#contact [R=301,L]
+
+# Przekierowanie /zasady-skupu na /#rules
+RewriteCond %{HTTPS} on
+RewriteCond %{REQUEST_URI} ^/zasady-skupu$
+RewriteRule ^(.*)$ https://www.skupksiazek-24.pl/#rules [R=301,L]
