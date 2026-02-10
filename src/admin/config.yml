@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "src/images"
+public_folder: "images"
+
+collections:
+  - name: "pages"
+    label: "Strony"
+    files:
+      - file: "src/index.html"
+        label: "Strona Główna"
+        name: "home"
+        fields:
+          - {label: "Tytuł strony (SEO)", name: "title", widget: "string"}
+          - {label: "Napis w Hero", name: "hero_title", widget: "string"}
+          - {label: "Nagłówek sekcji 1", name: "intro_title", widget: "string"}
+          - {label: "Tekst sekcji 1", name: "intro_text", widget: "markdown"}
+          - {label: "Zdjęcie sekcji 1", name: "intro_image", widget: "image"}
+          - {label: "Nagłówek 2", name: "about_title", widget: "string"}
+          - {label: "Nagłówek 3", name: "how_it_works_title", widget: "string"}
+          - {label: "Nagłówek 4", name: "what_next", widget: "string"}
+          - {label: "Nagłówek 5", name: "vinyls", widget: "string"}
